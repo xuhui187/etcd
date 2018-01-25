@@ -2,10 +2,10 @@ FROM ubuntu:16.10
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-
 RUN apt-get -y update \
   && apt-get -y install \
   build-essential \
+
   gcc \
   apt-utils \
   pkg-config \
